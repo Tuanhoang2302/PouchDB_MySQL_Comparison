@@ -6,6 +6,7 @@ var db = new PouchDB("gg")
 var schema = require('../schema')
 db.setSchema(schema)
 
+// tìm tổng số order của 1 customer
 router.get('/totalOrdersOfOneCustomer', async (req, res) => {
     var customerName = req.query.name
     var resultForm = {}
@@ -53,19 +54,6 @@ router.get('/customerbyName', async (req, res) => {
     
 })
 
-router.get('/quantity', async (req, res) => {
-    var customerName = req.query.name
-    db.find({
-        selector: {
-            'data.quantity_order' : {$gt: 50},
-        }, limit: 100000,use_index:['quantityOrder']
-    }).then((data) => {
-        console.log(data);
-        res.send(data)
-    })
-    
-})
-
 router.get('/customerbyId', async (req, res) => {
     var customerId = parseInt(req.query.id)
     db.rel.find('order', customerId).then((data) => {
@@ -73,7 +61,7 @@ router.get('/customerbyId', async (req, res) => {
     })
 })
 
-
+// tìm những customer sở hữu car có car model là xxx
 router.get('/customerByCarModel', async (req, res) => {
     var car_make = req.query.car_make
     var car_model = req.query.car_model
@@ -126,7 +114,7 @@ router.get('/customerByCarModel', async (req, res) => {
     })
 })
 
-
+// tìm tổng số quantity_order của 1 customer
 router.get("/totalQuantityOrderPerCus", async (req,res) => {
     var customerName = req.query.name
     db.find({
