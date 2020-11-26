@@ -23,7 +23,9 @@
   (We use [expressjs](https://www.npmjs.com/package/express), a web application framework for Node.js <br/>
   If you dont know how expressjs works, please following [here](https://expressjs.com/))
   
-  
+  ### Note:
+  * You should create database by yourself before querying, we leave create function in file *create.js* or [csv files](https://drive.google.com/drive/u/0/folders/1Z_FXOoutjGskmmD35FKmuDDf339RYZLw) for importing into database, both methods will take hours to finish. 
+  * If you dont understand some dependencies or queries in our project, you should check these links for more information: [pouchdb-api](https://pouchdb.com/api.html), [relational-pouch](https://github.com/pouchdb-community/relational-pouch)
   
    
    
