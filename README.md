@@ -17,7 +17,7 @@
   (but running by nodemon is far better than running by node) <br /> 
   (if you haven't installed nodemon, go to this [link](https://www.npmjs.com/package/nodemon) to install) <br />
   
-  When node server has started, you can run and test our query by postman <br />
+  When node server has started, you can open our project in VScode, check out our api and run&test query by postman <br />
   (We use [expressjs](https://www.npmjs.com/package/express), a web application framework for Node.js <br/>
   If you dont know how expressjs works, please following [here](https://expressjs.com/))
   
