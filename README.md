@@ -31,4 +31,4 @@
   [csv files](https://drive.google.com/drive/folders/1Z_FXOoutjGskmmD35FKmuDDf339RYZLw?usp=sharing)
   
 ## Report: 
-  You can read our report in this [link](https://drive.google.com/file/d/1jsYQ7qETqGE97f0mC_pViC2_J_PHwZj4/view?usp=sharing)
+  You can read our report in this [link](https://drive.google.com/file/d/1jsYQ7qETqGE97f0mC_pViC2_J_PHwZj4/view)
