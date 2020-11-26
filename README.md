@@ -27,5 +27,8 @@
   * You should create database by yourself before querying, we leave create function in file *create.js* or [csv files](https://drive.google.com/drive/u/0/folders/1Z_FXOoutjGskmmD35FKmuDDf339RYZLw) for importing into database, both methods will take hours to finish. 
   * If you dont understand some dependencies or queries in our project, you should check these links for more information: [pouchdb-api](https://pouchdb.com/api.html), [relational-pouch](https://github.com/pouchdb-community/relational-pouch)
   
-   
-   
+## Dataset:
+  [csv files](https://drive.google.com/drive/folders/1Z_FXOoutjGskmmD35FKmuDDf339RYZLw?usp=sharing)
+  
+## Report: 
+  You can read our report in this [link](https://drive.google.com/file/d/1jsYQ7qETqGE97f0mC_pViC2_J_PHwZj4/view?usp=sharing)
