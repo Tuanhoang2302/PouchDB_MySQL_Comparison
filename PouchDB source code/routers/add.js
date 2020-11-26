@@ -15,7 +15,7 @@ router.get('/customer', async (req, res) => {
     }).then((resutl) => res.send(resutl))
 })
 router.get('/customerBulk', async (req, res) => {
-    const numberToAdd = 100000
+    const numberToAdd = Math.pow(10, 5)
     var arrayOfCustomer = []
     for(let i = 0; i < numberToAdd; i++){    
         await db.rel.save('customer', {

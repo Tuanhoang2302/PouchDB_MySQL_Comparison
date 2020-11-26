@@ -8,10 +8,9 @@ var schema = require('../schema')
 db.setSchema(schema)
 var faker = require('faker');
 const { keys } = require('../schema');
-numberOfOrders = 10000000;
+numberOfOrders = Math.pow(10, 8);
 numberOfCar = 1000
-numberOfCustomer = 1000000
-
+numberOfCustomer = Math.pow(10, 6)
 
 router.get('/createCar', async (req, res) => {
     db.setSchema(schema)

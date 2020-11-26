@@ -126,45 +126,6 @@ router.get('/customerByCarModel', async (req, res) => {
     })
 })
 
-// router.get('/customerByCarModel', async (req, res) => {
-//     var car_make = req.query.car_make
-//     var car_model = req.query.car_model
-//     const range = 1000
-
-//     db.find({
-//         selector:{
-//             'data.car_make': car_make,
-//             'data.car_model': car_model
-//         }, 
-//     }).then((carData) => {
-//         var carDetail = carData.docs[0]
-//         let carIdJson = db.rel.parseDocID(carDetail._id);
-        
-//         db.find({
-//             selector:{
-//                 'data.car': {$eq: carIdJson.id}
-//             },
-//             limit: range, 
-//             fields: ['_id']
-//         }).then(async (orderDetailData) => {
-//             var customerList = []
-//             for(let i = 0; i < orderDetailData.docs.length; i++){
-//                 let orderDetailIdJson = db.rel.parseDocID(orderDetailData.docs[i]._id);
-//                 await db.rel.find('orderdetail', orderDetailIdJson.id).then((data) => {
-//                     var customer_name = data.customers[0].customer_name
-//                     var customer_email = data.customers[0].customer_email
-//                     var temp = {
-//                         customer_name: customer_name,
-//                         customer_email: customer_email
-//                     }
-//                     customerList.push(temp)
-//                 })
-//             }
-
-//             res.send(customerList)
-//         })
-//     })
-// })
 
 router.get("/totalQuantityOrderPerCus", async (req,res) => {
     var customerName = req.query.name
