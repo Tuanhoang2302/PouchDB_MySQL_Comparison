@@ -1,0 +1,101 @@
+1.Tìm customer có tên xxx:
+ví dụ: SELECT * FROM customers WHERE customer_name = 'Zula Zemlak'
+
+2.Tìm tổng số order của một customer có tên xxx:
+ví dụ: 
+SELECT c.customer_id, c.customer_name, COUNT(o.order_id)
+FROM orders o JOIN customers c ON o.customer_id = c.customer_id
+WHERE c.customer_name = 'Zula Wiegand'
+GROUP BY c.customer_id;
+
+3.Tìm tổng số quantity_order của customer có tên xxx:
+ví dụ: 
+SELECT c.customer_id, c.customer_name, SUM(od.quantity_order)
+FROM orders o JOIN customers c ON o.customer_id = c.customer_id
+JOIN orderdetails od ON od.order_id = o.order_id
+WHERE c.customer_name = 'Zula White'
+GROUP BY c.customer_id;
+
+4.tìm customer từ car_make và car_model
+Chưa có index:
+SELECT DISTINCT c.* 
+	FROM customers c JOIN orders o ON c.customer_id = o.customer_id
+    JOIN orderdetails od ON od.order_id = o.order_id
+    JOIN cars ON cars.car_id = od.car_id
+	WHERE cars.car_model = '100' AND cars.car_make = 'Audi'
+
+LIMIT 1000 => thời gian: 171.7744s
+
+5. insert into customers:
+DELIMITER //
+CREATE PROCEDURE add_customer(IN num INT(11))
+BEGIN
+	DECLARE i INT(11);
+    SET i = 1;
+	loop_label: LOOP
+    	IF i > num THEN
+        	LEAVE loop_label;
+        ELSE 
+        	INSERT INTO customers 
+            VALUES (i+1000000, concat('test', i), concat('test',i,'@gmail.com'), 'Heidenreich Summit');
+        END IF;
+	SET i = i + 1;
+        ITERATE loop_label;
+        END LOOP;
+        
+END //
+DELIMITER ;
+
+delete from customer:
+DELIMITER //
+CREATE PROCEDURE delete_customer(IN num INT(11))
+BEGIN
+	DECLARE i INT(11);
+    SET i = 1;
+	loop_label: LOOP
+    	IF i > num THEN
+        	LEAVE loop_label;
+        ELSE 
+        	DELETE FROM customers
+            WHERE customer_id = 1000000 + i;
+        END IF;
+        SET i = i + 1;
+        ITERATE loop_label;
+        END LOOP;     
+END //
+DELIMITER ;
+
+update customer:
+DELIMITER //
+CREATE PROCEDURE update_customer(IN num INT(11))
+BEGIN
+	DECLARE i INT(11);
+    SET i = 1;
+	loop_label: LOOP
+    	IF i > num THEN
+        	LEAVE loop_label;
+        ELSE 
+        	UPDATE customers
+		SET customer_address = 'Botsford Bridge'
+            WHERE customer_id = 1000000 + i;
+        END IF;
+        SET i = i + 1;
+        ITERATE loop_label;
+        END LOOP;     
+END //
+DELIMITER ;
+
+6. Tìm orderdetails có quantity_order > 50
+SELECT * 
+FROM orderdetails
+WHERE quantity_order > 50
+
+
+
+ 
+
+
+
+
+
+
