@@ -24,7 +24,7 @@
   If you dont know how expressjs works, please following [here](https://expressjs.com/))
   
   ### Note:
-  * You should create database by yourself before querying, we leave create function in file *create.js* or [csv files](https://drive.google.com/drive/u/0/folders/1Z_FXOoutjGskmmD35FKmuDDf339RYZLw) for importing into database, both methods will take hours to finish. 
+  * You should create database by yourself before querying, we leave create function in file *create.js* or [csv files](https://drive.google.com/file/d/1PZhsKg8iAcoWBituBLhDqq5ZpXZgAV7q/view?usp=sharing) for importing into database, both methods will take hours to finish. 
   * If you dont understand some dependencies or queries in our project, you should check these links for more information: [pouchdb-api](https://pouchdb.com/api.html), [relational-pouch](https://github.com/pouchdb-community/relational-pouch)
   
 ## Dataset:
