@@ -12,10 +12,10 @@
   The fastest method to get started with our project is by executing the following commands in a command prompt<br/>
   (we use C:\CSDL as a root folder for the remainder of the instructions):
   * C:\CSDL> git clone https://github.com/Tuanhoang2302/PouchDB_MySQL_Comparison.git
-  * C:\CSDL> cd PouchDB source code
-  * C:\CSDL\PouchDB source code> npm init
-  * C:\CSDL\PouchDB source code> npm i pouchdb express relational-pouch pouchdb-adapter-http pouchdb-find csvtojson faker objects-to-csv
-  * C:\CSDL\PouchDB source code> nodemon server (or node server) <br/>
+  * C:\CSDL> cd PouchDB_MySQL_Comparison/PouchDB source code
+  * C:\CSDL\PouchDB_MySQL_Comparison\PouchDB source code> npm init
+  * C:\CSDL\PouchDB_MySQL_Comparison\PouchDB source code> npm i pouchdb express relational-pouch pouchdb-adapter-http pouchdb-find csvtojson faker objects-to-csv
+  * C:\CSDL\PouchDB_MySQL_Comparison\PouchDB source code> nodemon server (or node server) <br/>
   (but running by nodemon is far better than running by node) <br /> 
   (if you haven't installed nodemon, go to this [link](https://www.npmjs.com/package/nodemon) to install) <br />
   
